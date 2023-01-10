@@ -30,12 +30,12 @@
             <div class="mbl-menu-bar">
                 <i class="fa-solid fa-bars"></i>
             </div> 
-            <ul class="shaper">
+            <ul class="menu-list">
                 <div class="mbl-logo">
                     <img src="https://cdn.shopify.com/s/files/1/0398/4339/7787/files/gr-navy_250x@2x.png?v=1614315841"
                         alt="">
                 </div>
-                <div class="close-menu">
+                <div onclick="closeFunction()" class="close-menu">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <li><a href="">Home</a></li>
@@ -58,23 +58,39 @@
                 <img src="https://cdn.shopify.com/s/files/1/0398/4339/7787/files/gr-navy_250x@2x.png?v=1614315841"
                     alt="">
             </div>
+            <div id="search-bar-pc">
+                 <input type="text" name="search" id="search">
+                 <i class="fa-solid fa-arrow-right"></i>
+                 <i onclick="closeFunction()" class="fa-solid fa-circle-xmark"></i>
+            </div>
             <div class="serach-cart">
                 <div class="currency">
                     <select>
                         <option value="0">USD $</option>
                         <option value="1">AUD $</option>
-                        <!-- <option value="2">USD $</option> -->
                     </select>
                 </div>
-                <div class="search">
+                <div onclick="searchFunction()" class="search">
                     <span>Search</span>
                 </div>
-                <div class="cart">
+                <div onclick="cartFunction()" class="cart">
                     <span>0</span>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div id="cart-side-bar">
+         <div class="top-bar">
+            <h4>Cart</h4>
+            <i onclick="closeFunction()" class="fa-solid fa-xmark"></i>
+         </div>
+         <hr>
+         <div class="content">
+           <p>Your cart is empty</p>
+           <svg width="56" viewBox="0 0 65 74" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M64.407 9.856L53.605 0H11.371L.569 9.856A1.548 1.548 0 00.1 11.603c.235.619.843 1.031 1.524 1.031h61.727a1.62 1.62 0 001.522-1.031 1.545 1.545 0 00-.467-1.747z" fill="#C4C4C4"></path><path d="M63.351 9.927H1.624C.728 9.927 0 10.644 0 11.529v59.267C0 72.566 1.454 74 3.249 74h58.478c1.795 0 3.249-1.434 3.249-3.204V11.53c0-.885-.728-1.602-1.625-1.602z" fill="#E4E4E4"></path><path d="M32.488 45.122c-7.963 0-14.44-6.447-14.44-14.37v-4.79a1.6 1.6 0 011.605-1.596 1.6 1.6 0 011.604 1.596v4.79c0 6.163 5.04 11.177 11.23 11.177 6.192 0 11.231-5.014 11.231-11.177v-4.79a1.6 1.6 0 011.604-1.596 1.6 1.6 0 011.605 1.596v4.79c0 7.923-6.477 14.37-14.44 14.37z" fill="#6D6D6D"></path></g></svg>
+         </div>
+    </div>
 
     <!-- first main section  -->
 
@@ -125,7 +141,7 @@
 
     <!-- add to cart product section  -->
 
-    <div class="products-buy">
+    <div class="container-fluid products-buy">
         <h4>Products</h4>
         <div class="row all-products">
             <div class="col-lg-6 product">
@@ -268,7 +284,7 @@
 
     <!-- compititers comparison section  -->
 
-    <div class="comparison">
+    <div class="comparison container-fluid">
         <div class="row cm-heading">
             <h4>Us vs. Them</h4>
         </div>
@@ -281,7 +297,8 @@
                     <span>vs.</span>
                     <p>Other Coffee</p>
                 </div>
-                <!-- 1st  -->
+
+                <!-- 1st -->
                 <div class="content">
                     <img class="cross"
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
@@ -291,6 +308,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-5a90decd--Artboard-1GR1.png?v=1623349218"
                         alt="">
                 </div>
+
                 <!-- 2nd -->
                 <div class="content">
                     <img class="tick"
@@ -301,6 +319,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+
                 <!-- 3rd -->
                 <div class="content">
                     <img class="tick"
@@ -311,6 +330,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+
                 <!-- 4th -->
                 <div class="content">
                     <img class="tick"
@@ -321,6 +341,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+
                 <!-- 5th -->
                 <div class="content">
                     <img class="tick"
@@ -331,6 +352,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+
                 <!-- 6th -->
                 <div class="content">
                     <img class="tick"
@@ -341,6 +363,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+                
                 <!-- 7th -->
                 <div class="content">
                     <img class="tick"
@@ -351,6 +374,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+
                 <!-- 8th -->
                 <div class="content">
                     <img class="tick"
@@ -361,6 +385,7 @@
                         src="https://cdn.shopify.com/s/files/1/0398/4339/7787/t/2/assets/pf-9a5a90de--Artboard-2GR1.png?v=1623349213"
                         alt="">
                 </div>
+                
                 <!-- 9th -->
                 <div class="content">
                     <img class="tick"
@@ -373,7 +398,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
+
 
     <!-- 7th section  -->
 
@@ -426,7 +452,7 @@
 
     <!-- video-insta-reel section  -->
 
-    <div class="video-insta">
+    <div class="video-insta container-fluid">
         <div class="row live-text">
             <div class="col-lg-12 all-text">
                 <div class="marquee">
@@ -439,7 +465,8 @@
         </div>
         <div class="all-images row">
             <div class="images col-lg-12">
-                  <!-- 1st  -->
+
+                <!-- 1st  -->
                 <a href="">
                     <img src="https://scontent.cdninstagram.com/v/t51.29350-15/281890266_558844418936885_7534627212052858143_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=pW2WIoAKRGUAX92rswl&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAuRRgGxegm5e92LMFYQdsYIA2H3uQugP1efvACjJhYnw&oe=63C1BA05"
                         alt="">
@@ -447,6 +474,7 @@
                         <img src="https://instafeed.nfcube.com/assets/img/instagram-icon.svg" alt="">
                     </div>
                 </a>
+
                 <!-- 2nd  -->
                 <a href="">
                     <img src="https://scontent.cdninstagram.com/v/t51.29350-15/279294678_528944182188703_399832204368927679_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=35gJ1U3zqOUAX8yi1_5&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDmaqFTZM0NL7Kpm76AF2L5BBX94QYSRZMWxOgMJncNDA&oe=63C080BE"
@@ -464,6 +492,7 @@
                         <img src="https://instafeed.nfcube.com/assets/img/video-icon.png" alt="">
                     </div>
                 </a>
+
                 <!-- 4th  -->
                 <a href="">
                     <img src="https://scontent.cdninstagram.com/v/t51.29350-15/279101259_391511122836475_6268615242790706567_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=BtnpM02RaLoAX-rRTw3&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDqd4Dg7mEEJ5h0Bzm7QoociGYhPp9fejkEKxhELVy0Mw&oe=63BFFFDE"
@@ -472,6 +501,7 @@
                         <img src="https://instafeed.nfcube.com/assets/img/video-icon.png" alt="">
                     </div>
                 </a>
+
                 <!-- 5th  -->
                 <a href="">
                     <img src="https://scontent.cdninstagram.com/v/t51.29350-15/278919463_5390057774338779_8208989959273146116_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=LE2vYm5PczsAX_fp0wU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCTmcx3b76DtPzxz208ULt1-GIOY_02wztDuR8i2uHVHA&oe=63C07D25"
@@ -482,24 +512,22 @@
                 </a>
             </div>
         </div>
-    </div>
-
+      </div>
+ 
     <!-- footer section  -->
 
-    <footer>
+    <footer class="container-fluid">
         <div class="row all-content">
             <div class="col-lg-4 f-heading">
                 <h6>Specialty Instant Coffee with calming L-Theanine</h6>
             </div>
-            <div class="col-lg-2 f-links">
+            <div class="col-lg-4 f-links">
                 <ul>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms of Services</a></li>
                     <li><a href="">Refund Policy</a></li>
                     <li><a href="">Subscription</a></li>
                 </ul>
-            </div>
-            <div class="col-lg-2 f-links">
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Shop</a></li>
@@ -508,6 +536,9 @@
                     <li><a href="">Contact</a></li>
                 </ul>
             </div>
+            <!-- <div class="col-lg-2 f-links">
+               
+            </div> -->
             <div class="col-lg-4 f-search">
                 <p>Sign up to get the goods - 15% off your first order</p>
                 <input type="text" name="search" placeholder="Email Address">
@@ -521,7 +552,7 @@
                     <a href="">Branding + Website by Mint Lane Studio</a>
                 </p>
             </div>
-            <div class="col-3 currency">
+            <div class="col-lg-3 col-sm-3 currency">
                 <select name="currency">
                     <option value="volvo">United State (USD $)</option>
                     <option value="saab">Australia (AUD $)</option>
