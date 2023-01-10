@@ -7,41 +7,44 @@ window.addEventListener("scroll", function () {
 
 const mblMenu = document.querySelector('.menu-list');
 const menuBar = document.querySelector('.mbl-menu-bar');
+const closeBar = document.querySelector('.close-menu')
 
-   menuBar.addEventListener('click', function(){
-         mblMenu.classList.toggle('show-mbl-menu');
+menuBar.addEventListener('click', function () {
+    mblMenu.classList.toggle('show-mbl-menu');
+
 })
+closeBar.addEventListener('click', function () {
+    mblMenu.classList.remove('show-mbl-menu');
+
+})
+
 
 function searchFunction() {
     let sf = document.getElementById("search-bar-pc");
     if (sf.style.display === "block") {
-      sf.style.display = "none";
+        sf.style.display = "none";
     } else {
-      sf.style.display = "block";
+        sf.style.display = "block";
     }
-  }
+}
 
 
-  function cartFunction() {
+function cartFunction() {
     let sf = document.getElementById("cart-side-bar");
     if (sf.style.display === "block") {
-      sf.style.display = "none";
+        sf.style.display = "none";
     } else {
-      sf.style.display = "block";
+        sf.style.display = "block";
     }
-  }
+}
 
-  function closeFunction() {
+function closeFunction() {
     let cart = document.getElementById("cart-side-bar");
     let sf = document.getElementById("search-bar-pc");
-    let cm = document.querySelector(".menu-list")
     if (cart.style.display = "block") {
-      cart.style.display = "none";
+        cart.style.display = "none";
     }
     if (sf.style.display = "block") {
         sf.style.display = "none";
-      }
-      if (cm.style.display = "block") {
-        cm.style.display = "none";
-      }
-  }
+    }
+}
