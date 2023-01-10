@@ -36,44 +36,75 @@ header nav .mbl-menu-bar i {
   font-size: 1.6rem;
   margin-left: 2rem;
 }
-header nav ul {
+header nav #search-bar-pc {
+  position: absolute;
+  right: 352px;
+  display: none;
+}
+header nav #search-bar-pc input {
+  width: 650px;
+  padding: 0.7rem 1rem;
+  border: 2px solid #304051;
+  z-index: 9999;
+  box-shadow: 0 3px 2px 100vh rgba(0, 0, 0, 0.4);
+}
+header nav #search-bar-pc .fa-arrow-right {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: gray;
+}
+header nav #search-bar-pc .fa-arrow-right:hover {
+  color: rgb(192, 192, 192);
+}
+header nav #search-bar-pc .fa-circle-xmark {
+  z-index: 9999;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  margin-top: 0.7rem;
+  position: absolute;
+}
+header nav .menu-list {
   display: flex;
   padding-top: 0.8rem;
 }
-header nav ul .close-menu {
+header nav .menu-list .close-menu {
   display: none;
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 34px;
 }
-header nav ul .close-menu i {
+header nav .menu-list .close-menu i {
   font-size: 1.5rem;
 }
-header nav ul li {
+header nav .menu-list li {
   list-style: none;
   padding-left: 1.5rem;
 }
-header nav ul li a {
+header nav .menu-list li a {
   text-decoration: none;
   color: #304051;
   font-weight: 600;
   font-size: 1.2rem;
   transition: 0.25s ease-in;
 }
-header nav ul li a:hover {
+header nav .menu-list li a:hover {
   opacity: 0.5;
 }
-header nav ul .mbl-logo {
+header nav .menu-list .mbl-logo {
   display: none;
 }
-header nav ul .mbl-logo img {
-  margin-top: -4.5rem;
+header nav .menu-list .mbl-logo img {
+  margin-top: -3rem;
   width: 70%;
 }
-header nav ul .mbl-currency {
+header nav .menu-list .mbl-currency {
   display: none;
 }
-header nav ul .mbl-currency select {
+header nav .menu-list .mbl-currency select {
   background: none;
   border: none;
   cursor: pointer;
@@ -83,14 +114,14 @@ header nav ul .mbl-currency select {
   margin-top: 1.4rem;
   margin-left: -0.2rem;
 }
-header nav ul .mbl-currency select option {
+header nav .menu-list .mbl-currency select option {
   color: #304051;
 }
-header nav ul .mbl-search {
+header nav .menu-list .mbl-search {
   display: none;
   margin-top: 1.5rem;
 }
-header nav ul .mbl-search input {
+header nav .menu-list .mbl-search input {
   padding: 0.4rem 1rem;
   border-radius: 30px;
   color: #304051;
@@ -124,8 +155,8 @@ header nav .serach-cart .search span {
   cursor: pointer;
 }
 header nav .serach-cart .cart {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: #dcefed;
   border-radius: 50%;
   position: relative;
@@ -135,8 +166,9 @@ header nav .serach-cart .cart span {
   color: #304051;
   font-weight: 600;
   cursor: pointer;
-  left: 14px;
-  top: 7px;
+  left: 11px;
+  top: 4px;
+  font-size: 17px;
   position: absolute;
 }
 
@@ -145,6 +177,41 @@ header nav.sticky {
   top: 15px;
   z-index: 9999;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-side-bar {
+  width: 25rem;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: none;
+  z-index: 9999;
+  background-color: #fff;
+}
+#cart-side-bar .top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  padding-top: 1.5rem;
+}
+#cart-side-bar .top-bar h4 {
+  font-size: 25px;
+  font-family: "Inconsolata", monospace;
+  color: #304051;
+  font-weight: 700;
+}
+#cart-side-bar .top-bar i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#cart-side-bar .content {
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+#cart-side-bar .content p {
+  margin-top: 12rem;
 }
 
 .first-section {
@@ -423,6 +490,7 @@ header nav.sticky {
   background-attachment: fixed;
 }
 .five-section .all-content {
+  width: 100%;
   align-items: center;
 }
 .five-section .all-content .text-side {
@@ -469,6 +537,7 @@ header nav.sticky {
 .f-sub-section .all-content {
   text-align: center;
   padding: 4rem;
+  width: 100%;
 }
 .f-sub-section .all-content h6 {
   font-size: 18px;
@@ -713,10 +782,12 @@ header nav.sticky {
 .money-back {
   background-color: rgb(199, 219, 169);
   position: relative;
+  width: 100%;
 }
 .money-back .all-content {
   justify-content: center;
   padding: 10rem;
+  width: 100%;
 }
 .money-back .all-content .content {
   text-align: center;
@@ -857,20 +928,19 @@ header nav.sticky {
 }
 .video-insta .all-images .images {
   display: flex;
-  padding-left: 2rem;
 }
 .video-insta .all-images .images a {
   position: relative;
 }
 .video-insta .all-images .images a img {
-  width: 100%;
+  width: 104%;
   height: 65%;
   cursor: pointer;
 }
 .video-insta .all-images .images a .youtube,
 .video-insta .all-images .images a .instagram {
   background-color: #304051;
-  width: 100%;
+  width: 104%;
   height: 65%;
   justify-content: center;
   align-items: center;
@@ -897,7 +967,7 @@ header nav.sticky {
 
 footer {
   background-color: #dcefed;
-  margin-top: -8.7rem;
+  margin-top: -9rem;
 }
 footer .all-content {
   padding: 5rem;
@@ -908,6 +978,9 @@ footer .all-content .f-heading h6 {
   font-size: 50px;
   line-height: 55px;
   font-family: "Squada One", cursive;
+}
+footer .all-content .f-links {
+  display: flex;
 }
 footer .all-content .f-links li {
   list-style: none;
@@ -978,17 +1051,20 @@ footer .lower-footer .currency select {
     text-align: center;
     margin-right: 0.5rem;
   }
-  header nav ul li {
+  header nav .menu-list li {
     width: 80px;
     text-align: center;
     padding-left: 0rem;
   }
+  footer {
+    margin-top: -8rem;
+  }
 }
 @media only screen and (max-width: 950px) {
-  header nav ul {
-    position: absolute;
+  header nav .menu-list {
+    position: fixed;
     flex-direction: column;
-    top: -35px;
+    top: 0px;
     width: 24rem;
     margin-left: -80rem;
     padding-top: 4rem;
@@ -996,13 +1072,11 @@ footer .lower-footer .currency select {
     height: 100vh;
     background-color: #fff;
     transition: all 0.3s linear;
+    z-index: 9999;
     box-shadow: 0 3px 2px 100vh rgba(0, 0, 0, 0.4);
   }
   header nav .show-mbl-menu {
     margin-left: 0;
-  }
-  header nav ul .close-menu {
-    display: block;
   }
   header nav .serach-cart .currency select {
     display: none;
@@ -1017,24 +1091,37 @@ footer .lower-footer .currency select {
   header nav.sticky {
     padding: 1rem 0 0.7rem 0;
   }
-  header nav ul li {
+  header nav .menu-list li {
     text-align: left;
     padding-top: 1rem;
+    padding-left: 0rem;
   }
-  header nav ul li a {
+  header nav .menu-list li a {
     font-weight: 700;
   }
-  header nav ul .mbl-logo {
+  header nav .menu-list .mbl-logo {
+    display: block;
+    margin-top: 0rem;
+  }
+  header nav .menu-list .mbl-currency {
     display: block;
   }
-  header nav ul .mbl-currency {
+  header nav .menu-list .close-menu {
     display: block;
   }
-  header nav ul .mbl-search {
+  header nav .menu-list .mbl-search {
     display: block;
   }
   header nav .mbl-menu-bar {
     display: block;
+  }
+  .video-insta .all-images .images a .youtube img, .video-insta .all-images .images a .instagram img {
+    width: 25px;
+    height: 25px;
+    margin: 5rem 0 0 5rem;
+  }
+  footer {
+    margin-top: -6rem;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -1110,5 +1197,316 @@ footer .lower-footer .currency select {
     align-items: center;
     padding: 10rem 0 0rem 2rem;
     margin: 0;
+  }
+  .video-insta .all-images .images a .youtube img, .video-insta .all-images .images a .instagram img {
+    width: 25px;
+    height: 25px;
+    margin: 4rem 0 0 4rem;
+  }
+  footer {
+    margin-top: -4.5rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .video-insta .all-images .images a .youtube img, .video-insta .all-images .images a .instagram img {
+    width: 20px;
+    height: 20px;
+    margin: 3rem 0 0 3rem;
+  }
+  footer {
+    margin-top: -3.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  header nav .menu-list {
+    width: 90%;
+  }
+  #cart-side-bar {
+    width: 100%;
+  }
+  header nav .serach-cart {
+    padding-right: 1.5rem;
+  }
+  header nav .logo img {
+    width: 100%;
+  }
+  .first-section .all-content {
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0 0rem 0rem;
+    margin: 0;
+  }
+  .first-section .all-content .text-content {
+    padding-bottom: 4rem;
+    padding: 0 3rem;
+  }
+  .first-section .all-content .text-content h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    line-height: 44px;
+  }
+  .first-section .all-content .text-content h6 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .first-section .all-content .text-content p {
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 1.7rem;
+  }
+  .first-section .all-content .text-content button {
+    margin-left: 3rem;
+    margin-top: 1.3rem;
+  }
+  .second-section .all-content .all-text h2 {
+    font-family: "Squada One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 44px;
+    line-height: 42px;
+  }
+  .second-section .all-content .all-text p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .products-buy h4 {
+    font-size: 44px;
+    line-height: 40px;
+  }
+  .products-buy .all-products {
+    padding: 0rem;
+  }
+  .products-buy .all-products .product p {
+    font-size: 20px;
+    padding: 1rem 1rem;
+  }
+  .third-section .all-content .quote h4 {
+    font-size: 42px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .third-section .all-content .gif-side img {
+    width: 100%;
+    text-align: center;
+    margin-left: 1rem;
+  }
+  .forth-section .all-content .gif-side img {
+    width: 100%;
+    height: 100%;
+  }
+  .forth-section .all-content .content-side h4 {
+    font-size: 42px;
+    text-align: center;
+    line-height: 44px;
+  }
+  .forth-section .all-content .content-side {
+    padding: 4rem 2rem 9rem 2rem;
+    text-align: center;
+  }
+  .forth-section .all-content .content-side p {
+    font-size: 20px;
+    margin-top: 18px;
+    line-height: 31px;
+    margin-bottom: 3rem;
+  }
+  .bg-text {
+    display: none;
+  }
+  .five-section .all-content .text-side h4 {
+    font-size: 46px;
+    line-height: 48px;
+    width: 100%;
+  }
+  .five-section .all-content .text-side p {
+    font-size: 20px;
+    margin-top: 17px;
+    color: #304051;
+    font-weight: 700;
+    line-height: 27px;
+    margin-bottom: 3rem;
+  }
+  .five-section .all-content .text-side {
+    padding: 10rem 1rem 0 2rem;
+    text-align: center;
+  }
+  .f-sub-section .all-content p {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 1px;
+  }
+  .f-sub-section .all-content {
+    text-align: center;
+    padding: 4rem 2rem 4rem 3rem;
+    width: 100%;
+  }
+  .six-section .all-content .content-side p {
+    font-size: 20px;
+    margin-top: 25px;
+    color: #304051;
+    font-weight: 700;
+    font-family: "Inconsolata", monospace;
+    line-height: 27px;
+    margin-bottom: 2rem;
+  }
+  .six-section .all-content .content-side {
+    padding: 2rem;
+  }
+  .six-section .all-content .content-side h4 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  .feedback-comments .fc-heading h4 {
+    font-size: 42px;
+    line-height: 45px;
+    padding: 0 3rem;
+  }
+  .feedback-comments .fc-heading p {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #304051;
+    font-weight: 700;
+    font-family: "Inconsolata", monospace;
+    line-height: 27px;
+    margin-bottom: 0rem;
+  }
+  .feedback-comments .all-comments .comments img {
+    width: 100%;
+  }
+  .feedback-comments {
+    background-color: #dcefed;
+    padding: 4rem 1rem;
+  }
+  .feedback-comments .all-comments .btn a {
+    margin-bottom: 4rem;
+  }
+  .comparison .cm-heading {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 12rem;
+  }
+  .comparison .cm-heading h4 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  .comparison .all-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  .comparison .all-content .heading-content .logo {
+    width: 100px;
+    height: 20px;
+  }
+  .comparison .all-content .heading-content p {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  .comparison .all-content .content {
+    padding: 1rem 2rem;
+  }
+  .comparison .all-content .content .cross {
+    width: 30px;
+  }
+  .comparison .all-content .content span {
+    font-size: 15px;
+  }
+  .comparison .all-content .content .tick, .comparison .all-content .content .cross {
+    width: 30px;
+  }
+  .seven-section .all-content .content-side h4 {
+    font-size: 42px;
+    line-height: 45px;
+  }
+  .seven-section .all-content .content-side p {
+    font-size: 20px;
+    margin-top: 1px;
+    line-height: 27px;
+    margin-bottom: 3rem;
+  }
+  .seven-section .all-content .content-side {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .money-back .all-content img {
+    position: absolute;
+    width: 140px;
+    right: 10px;
+    top: -40px;
+  }
+  .money-back .all-content .content h3 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+  .money-back .all-content .content p {
+    font-size: 20px;
+    margin-top: 5px;
+    line-height: 27px;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+  .b-frnd .all-content img {
+    position: absolute;
+    width: 200px;
+    margin-left: -1rem;
+    top: -1rem;
+  }
+  .b-frnd .all-content .content {
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .b-frnd .all-content .content h6 {
+    font-family: "Squada One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  .b-frnd .all-content .content p {
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+    width: 100%;
+    line-height: 22px;
+  }
+  .video-insta .all-images .images a .youtube img, .video-insta .all-images .images a .instagram img {
+    width: 17px;
+    height: 17px;
+    margin: 2rem 0 0 2rem;
+  }
+  footer {
+    margin-top: -2.5rem;
+  }
+  footer .all-content .f-heading h6 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 45px;
+    font-family: "Squada One", cursive;
+  }
+  footer .all-content {
+    padding: 2rem;
+  }
+  footer .lower-footer .currency select {
+    cursor: pointer;
+    margin-left: 5rem;
+  }
+  footer .all-content .f-links li {
+    list-style: none;
+    padding: 0.3rem 1rem;
+  }
+  footer .all-content .f-search p {
+    font-size: 20px;
+    color: #304051;
+    font-weight: 700;
+  }
+  ol, ul {
+    padding-left: 0rem;
   }
 }/*# sourceMappingURL=home.css.map */
